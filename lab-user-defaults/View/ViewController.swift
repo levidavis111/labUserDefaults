@@ -12,6 +12,13 @@ class ViewController: UIViewController {
     
     var horoscope: Horoscope?
     
+    var sign: String = "" {
+        didSet {
+            
+            print("hi")
+        }
+    }
+    
     var userName: String = "" {
         didSet {
             performLabelTextUpdates()
@@ -30,6 +37,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameTextFieldOutlet: UITextField!
     @IBOutlet weak var datePickerOutlet: UIDatePicker!
     
+    
+    @IBAction func enterSignTextFieldAction(_ sender: UITextField) {
+        if let text = sender.text {
+            print(text)
+            sign = text
+            loadData()
+        }
+    }
     @IBAction func datePickerAction(_ sender: UIDatePicker) {
         
         date = sender.date
@@ -48,7 +63,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         nameTextFieldOutlet.delegate = self
         loadDefaultSettings()
-        loadData()
+//        loadData()
     }
     
     private func loadDefaultSettings() {
@@ -75,8 +90,19 @@ class ViewController: UIViewController {
         datePickerOutlet.date = date
     }
     
+//    private func loadData() {
+//        HoroscopeAPIManager.manager.getHoroscope { (result) in
+//            switch result {
+//            case .failure(let error):
+//                print(error)
+//            case .success(let horoscope):
+//                self.horoscope = horoscope
+//            }
+//        }
+//    }
+
     private func loadData() {
-        HoroscopeAPIManager.manager.getHoroscope { (result) in
+        HoroscopeAPIManager.manager.getHoroscope(sign: sign) { (result) in
             switch result {
             case .failure(let error):
                 print(error)
@@ -85,7 +111,6 @@ class ViewController: UIViewController {
             }
         }
     }
-   
 
 }
 

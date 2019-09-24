@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var horoscope: Horoscope?
+    
     var userName: String = "" {
         didSet {
             performLabelTextUpdates()
@@ -32,10 +34,21 @@ class ViewController: UIViewController {
         
         date = sender.date
     }
+    @IBAction func readHoroscopeButtonPressed(_ sender: Any) {
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is HoroscopeDetailViewController {
+            guard let horoscopeVC = segue.destination as? HoroscopeDetailViewController else {return}
+            horoscopeVC.horoscope = horoscope
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextFieldOutlet.delegate = self
         loadDefaultSettings()
+        loadData()
     }
     
     private func loadDefaultSettings() {
@@ -60,6 +73,17 @@ class ViewController: UIViewController {
     
     private func performDateUpdate() {
         datePickerOutlet.date = date
+    }
+    
+    private func loadData() {
+        HoroscopeAPIManager.manager.getHoroscope { (result) in
+            switch result {
+            case .failure(let error):
+                print(error)
+            case .success(let horoscope):
+                self.horoscope = horoscope
+            }
+        }
     }
    
 

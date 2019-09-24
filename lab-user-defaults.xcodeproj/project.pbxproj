@@ -14,6 +14,11 @@
 		FCEF1342233A9C7D0061BEA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCEF1340233A9C7D0061BEA9 /* LaunchScreen.storyboard */; };
 		FCEF134D233A9C7D0061BEA9 /* lab_user_defaultsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEF134C233A9C7D0061BEA9 /* lab_user_defaultsTests.swift */; };
 		FCEF1358233A9FA90061BEA9 /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEF1357233A9FA90061BEA9 /* UserDefaultsWrapper.swift */; };
+		FCEF135D233AA8E60061BEA9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEF135C233AA8E60061BEA9 /* NetworkManager.swift */; };
+		FCEF135F233AA8F90061BEA9 /* HoroscopeAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEF135E233AA8F90061BEA9 /* HoroscopeAPIManager.swift */; };
+		FCEF1361233AA9050061BEA9 /* Horoscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEF1360233AA9050061BEA9 /* Horoscope.swift */; };
+		FCEF1363233AAACC0061BEA9 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEF1362233AAACC0061BEA9 /* AppError.swift */; };
+		FCEF1365233AB0460061BEA9 /* HoroscopeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEF1364233AB0460061BEA9 /* HoroscopeDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,11 @@
 		FCEF134C233A9C7D0061BEA9 /* lab_user_defaultsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lab_user_defaultsTests.swift; sourceTree = "<group>"; };
 		FCEF134E233A9C7D0061BEA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCEF1357233A9FA90061BEA9 /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
+		FCEF135C233AA8E60061BEA9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FCEF135E233AA8F90061BEA9 /* HoroscopeAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeAPIManager.swift; sourceTree = "<group>"; };
+		FCEF1360233AA9050061BEA9 /* Horoscope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horoscope.swift; sourceTree = "<group>"; };
+		FCEF1362233AAACC0061BEA9 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		FCEF1364233AB0460061BEA9 /* HoroscopeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +110,10 @@
 			isa = PBXGroup;
 			children = (
 				FCEF1357233A9FA90061BEA9 /* UserDefaultsWrapper.swift */,
+				FCEF135C233AA8E60061BEA9 /* NetworkManager.swift */,
+				FCEF135E233AA8F90061BEA9 /* HoroscopeAPIManager.swift */,
+				FCEF1362233AAACC0061BEA9 /* AppError.swift */,
+				FCEF1360233AA9050061BEA9 /* Horoscope.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -118,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				FCEF1339233A9C7B0061BEA9 /* ViewController.swift */,
+				FCEF1364233AB0460061BEA9 /* HoroscopeDetailViewController.swift */,
 				FCEF133B233A9C7B0061BEA9 /* Main.storyboard */,
 			);
 			path = View;
@@ -224,9 +239,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCEF135D233AA8E60061BEA9 /* NetworkManager.swift in Sources */,
+				FCEF135F233AA8F90061BEA9 /* HoroscopeAPIManager.swift in Sources */,
+				FCEF1365233AB0460061BEA9 /* HoroscopeDetailViewController.swift in Sources */,
+				FCEF1361233AA9050061BEA9 /* Horoscope.swift in Sources */,
 				FCEF133A233A9C7B0061BEA9 /* ViewController.swift in Sources */,
 				FCEF1358233A9FA90061BEA9 /* UserDefaultsWrapper.swift in Sources */,
 				FCEF1338233A9C7B0061BEA9 /* AppDelegate.swift in Sources */,
+				FCEF1363233AAACC0061BEA9 /* AppError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
